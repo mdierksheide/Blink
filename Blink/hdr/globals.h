@@ -3,7 +3,7 @@
 
 namespace globals
 {
-	int PIXELS_PER_METER = 30;
+	const int PIXELS_PER_METER = 30;
 }
 
 #endif

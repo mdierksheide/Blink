@@ -88,10 +88,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>hdr/sdl;hdr</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>lib\SDL2.lib;lib\SDL2main.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -142,7 +144,88 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="hdr\game.h" />
     <ClInclude Include="hdr\globals.h" />
+    <ClInclude Include="hdr\sdl\begin_code.h" />
+    <ClInclude Include="hdr\sdl\close_code.h" />
+    <ClInclude Include="hdr\sdl\SDL.h" />
+    <ClInclude Include="hdr\sdl\SDL_assert.h" />
+    <ClInclude Include="hdr\sdl\SDL_atomic.h" />
+    <ClInclude Include="hdr\sdl\SDL_audio.h" />
+    <ClInclude Include="hdr\sdl\SDL_bits.h" />
+    <ClInclude Include="hdr\sdl\SDL_blendmode.h" />
+    <ClInclude Include="hdr\sdl\SDL_clipboard.h" />
+    <ClInclude Include="hdr\sdl\SDL_config.h" />
+    <ClInclude Include="hdr\sdl\SDL_cpuinfo.h" />
+    <ClInclude Include="hdr\sdl\SDL_egl.h" />
+    <ClInclude Include="hdr\sdl\SDL_endian.h" />
+    <ClInclude Include="hdr\sdl\SDL_error.h" />
+    <ClInclude Include="hdr\sdl\SDL_events.h" />
+    <ClInclude Include="hdr\sdl\SDL_filesystem.h" />
+    <ClInclude Include="hdr\sdl\SDL_gamecontroller.h" />
+    <ClInclude Include="hdr\sdl\SDL_gesture.h" />
+    <ClInclude Include="hdr\sdl\SDL_haptic.h" />
+    <ClInclude Include="hdr\sdl\SDL_hints.h" />
+    <ClInclude Include="hdr\sdl\SDL_image.h" />
+    <ClInclude Include="hdr\sdl\SDL_joystick.h" />
+    <ClInclude Include="hdr\sdl\SDL_keyboard.h" />
+    <ClInclude Include="hdr\sdl\SDL_keycode.h" />
+    <ClInclude Include="hdr\sdl\SDL_loadso.h" />
+    <ClInclude Include="hdr\sdl\SDL_log.h" />
+    <ClInclude Include="hdr\sdl\SDL_main.h" />
+    <ClInclude Include="hdr\sdl\SDL_messagebox.h" />
+    <ClInclude Include="hdr\sdl\SDL_mouse.h" />
+    <ClInclude Include="hdr\sdl\SDL_mutex.h" />
+    <ClInclude Include="hdr\sdl\SDL_name.h" />
+    <ClInclude Include="hdr\sdl\SDL_opengl.h" />
+    <ClInclude Include="hdr\sdl\SDL_opengles.h" />
+    <ClInclude Include="hdr\sdl\SDL_opengles2.h" />
+    <ClInclude Include="hdr\sdl\SDL_opengles2_gl2.h" />
+    <ClInclude Include="hdr\sdl\SDL_opengles2_gl2ext.h" />
+    <ClInclude Include="hdr\sdl\SDL_opengles2_gl2platform.h" />
+    <ClInclude Include="hdr\sdl\SDL_opengles2_khrplatform.h" />
+    <ClInclude Include="hdr\sdl\SDL_opengl_glext.h" />
+    <ClInclude Include="hdr\sdl\SDL_pixels.h" />
+    <ClInclude Include="hdr\sdl\SDL_platform.h" />
+    <ClInclude Include="hdr\sdl\SDL_power.h" />
+    <ClInclude Include="hdr\sdl\SDL_quit.h" />
+    <ClInclude Include="hdr\sdl\SDL_rect.h" />
+    <ClInclude Include="hdr\sdl\SDL_render.h" />
+    <ClInclude Include="hdr\sdl\SDL_revision.h" />
+    <ClInclude Include="hdr\sdl\SDL_rwops.h" />
+    <ClInclude Include="hdr\sdl\SDL_scancode.h" />
+    <ClInclude Include="hdr\sdl\SDL_shape.h" />
+    <ClInclude Include="hdr\sdl\SDL_stdinc.h" />
+    <ClInclude Include="hdr\sdl\SDL_surface.h" />
+    <ClInclude Include="hdr\sdl\SDL_system.h" />
+    <ClInclude Include="hdr\sdl\SDL_syswm.h" />
+    <ClInclude Include="hdr\sdl\SDL_test.h" />
+    <ClInclude Include="hdr\sdl\SDL_test_assert.h" />
+    <ClInclude Include="hdr\sdl\SDL_test_common.h" />
+    <ClInclude Include="hdr\sdl\SDL_test_compare.h" />
+    <ClInclude Include="hdr\sdl\SDL_test_crc32.h" />
+    <ClInclude Include="hdr\sdl\SDL_test_font.h" />
+    <ClInclude Include="hdr\sdl\SDL_test_fuzzer.h" />
+    <ClInclude Include="hdr\sdl\SDL_test_harness.h" />
+    <ClInclude Include="hdr\sdl\SDL_test_images.h" />
+    <ClInclude Include="hdr\sdl\SDL_test_log.h" />
+    <ClInclude Include="hdr\sdl\SDL_test_md5.h" />
+    <ClInclude Include="hdr\sdl\SDL_test_random.h" />
+    <ClInclude Include="hdr\sdl\SDL_thread.h" />
+    <ClInclude Include="hdr\sdl\SDL_timer.h" />
+    <ClInclude Include="hdr\sdl\SDL_touch.h" />
+    <ClInclude Include="hdr\sdl\SDL_types.h" />
+    <ClInclude Include="hdr\sdl\SDL_version.h" />
+    <ClInclude Include="hdr\sdl\SDL_video.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\game.cpp" />
+    <ClCompile Include="src\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="lib\SDL2.lib" />
+    <Library Include="lib\SDL2main.lib" />
+    <Library Include="lib\SDL2_image.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
