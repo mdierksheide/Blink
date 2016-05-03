@@ -13,6 +13,8 @@ void Game::GameLoop()
 
 	while (true)
 	{
-
+		// Input
+		// Update
+		// Draw
 	}
 }
