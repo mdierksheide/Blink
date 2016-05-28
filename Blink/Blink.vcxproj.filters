@@ -234,12 +234,24 @@
     <ClInclude Include="hdr\sdl\SDL_image.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="hdr\graphics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hdr\input_stream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="hdr\keyboard_input.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\graphics.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

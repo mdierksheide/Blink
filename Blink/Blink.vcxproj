@@ -149,6 +149,9 @@
   <ItemGroup>
     <ClInclude Include="hdr\game.h" />
     <ClInclude Include="hdr\globals.h" />
+    <ClInclude Include="hdr\graphics.h" />
+    <ClInclude Include="hdr\input_stream.h" />
+    <ClInclude Include="hdr\keyboard_input.h" />
     <ClInclude Include="hdr\sdl\begin_code.h" />
     <ClInclude Include="hdr\sdl\close_code.h" />
     <ClInclude Include="hdr\sdl\SDL.h" />
@@ -223,6 +226,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\game.cpp" />
+    <ClCompile Include="src\graphics.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
